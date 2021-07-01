@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+*, ::after, ::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.header{
+  width: 100%;
+  height: 200px;
+  background-image:url('/src/assets/photo-1542241647-9cbbada2b309.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display:flex;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.header h2{
+  color: #fff;
+  margin-top: 3rem;
+  font-size: 1.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section-center{
+  position: absolute;
+  top: 7rem;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  /* background: blue; */
+  /* height: 300px; */
+  width: 80%;
+}
+form{
+  width: 100%;
+  margin-top: .5rem;
+}
+.form-control{
+  display: flex;
+}
+.form-input{
+  width: 100%;
+  padding: .8rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.submit-btn{
+  padding: .8rem;
+  background-color: skyblue;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: .3rem;
+}
+.task-length{
+  margin-top: 2rem;
+}
+.tasks{
+  margin-top: 2rem;
+  background: #f3f3f9;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.clear-btn{
+  border: none;
+  outline: none;
+  color: tomato;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.3rem;
+
+}
+.mytask{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.mytask p{
+  font-size: 1.5rem;
+}
+.buttons{
+  display: flex;
+}
+.buttons button:last-child{
+  margin-left: .5rem;
+}
+.edit-btn{
+  background: transparent;
+  border: transparent;
+  font-size: 1.3rem;
+  color: skyblue;
+  cursor: pointer;
+}
+.delete-btn{
+  background: transparent;
+  border: transparent;
+  font-size: 1.3rem;
+  color: tomato;
+  cursor: pointer;
+}
+.alert-box{
+  display: block;
+  margin: .5rem 0;
+}
+.alert.alert-success{
+  color: blue;
+}
+.alert.alert-danger{
+  color: tomato;
+}
+
+/* responsive */
+@media screen and (max-width: 650px){
+  .section-center{
+    top: 5rem;
+    padding: .5rem 1rem;
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+  .header h2{
+    margin-top: 1rem;
+  }
+  .form-control{
+    flex-direction: column;
+  }
+  .submit-btn{
+    margin: 0;
+    margin-top: .3rem;
+  }
+  .tasks{
+    margin-top: 2rem;
   }
 }
