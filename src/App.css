@@ -140,4 +140,14 @@ form{
   .tasks{
     margin-top: 2rem;
   }
+  .mytask p{
+    font-size: .8rem;
+    white-space: normal;
+  }
+  .edit-btn, .delete-btn{
+    font-size: 1rem;
+  }
+  *, ::after, ::before{
+    overflow-x: hidden;
+  }
 }
